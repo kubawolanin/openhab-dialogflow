@@ -1,0 +1,29 @@
+{
+  "name": "functions",
+  "scripts": {
+    "build": "tslint -p tslint.json && tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase experimental:functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@google-cloud/storage": "^1.5.2",
+    "@types/sprintf-js": "^1.1.0",
+    "actions-on-google": "^1.7.0",
+    "deep-freeze": "0.0.1",
+    "firebase-admin": "^5.4.3",
+    "firebase-functions": "^0.7.1",
+    "sprintf-js": "^1.1.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3",
+    "winston": "^2.4.0"
+  },
+  "private": true
+}
